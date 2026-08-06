@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "report-bot"
+version = "1.0.0"
+description = "Telegram expense tracker with CSV and Excel reports"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Dmytro Tykhorskyi" }]
+keywords = ["telegram", "bot", "expenses", "reports", "xlsx", "automation"]
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+xlsx = ["openpyxl>=3.1"]
+
+[tool.setuptools.packages.find]
+include = ["reportbot*"]
